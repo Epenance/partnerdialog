@@ -1,0 +1,192 @@
+@import "base";
+
+body {
+  background:$body-bg;
+}
+
+header {
+  background:$header-bg;
+  height:35px;
+  width:100%;
+
+  ul {
+    width:100%;
+    height:100%;
+    display:block;
+    max-width:1200px;
+    padding:0px 10px;
+    margin:auto;
+    text-align:right;
+
+    li {
+      display:inline-block;
+      line-height:35px;
+      margin-left:20px;
+
+      a {
+        color:rgba(255,255,255,0.3);
+        font-size:12px;
+        text-decoration:none;
+        @include trans;
+
+        &:hover {
+          color:rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+}
+
+nav#mainNav {
+  width:100%;
+  height:95px;
+  max-width:1200px;
+  padding:0px 10px;
+  margin:auto;
+  margin-bottom:35px;
+
+  #logo {
+    width:343px;
+    height:53px;
+    float:left;
+    background:url(../img/logo.png);
+    position:relative;
+    top:14px;
+
+    a {
+      display:block;
+      width:100%;
+      height:100%;
+    }
+  }
+
+  ul {
+    float:right;
+    height:100%;
+    text-align:right;
+    padding-top:44px;
+
+    li {
+      margin-left:50px;
+      display:inline-block;
+      height:100%;
+
+      a {
+        color:$mainNav-color;
+        @include trans;
+        text-decoration:none;
+        font-size:20px;
+
+        &:hover {
+          color:$mainNav-color-hover;
+        }
+      }
+    }
+  }
+}
+
+
+#getContacted {
+  height:100px;
+  width:100%;
+  max-width:1200px;
+  background:$header-bg;
+  margin:auto;
+  @include border-radius(4px, 4px);
+  padding:0px 30px;
+  margin-bottom:50px;
+
+  h2 {
+    font-family:$second-font;
+    font-size:26px;
+    font-weight:bold;
+    color:#fff;
+    line-height:100px;
+    //display:inline-block;
+    float:left;
+  }
+
+  form {
+    float:right;
+    height:100%;
+    line-height:100px;
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color:    $header-bg;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    $header-bg;
+      opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    $header-bg;
+      opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    $header-bg;
+    }
+
+    input {
+      margin-left:10px;
+      height:40px;
+      line-height:40px;
+    }
+
+    input[type="text"] {
+      padding:0px 15px;
+      background:#fff;
+      border:none;
+      @include border-radius(4px,4px);
+      color:$header-bg;
+      font-size:14px;
+
+    }
+
+    input[type="submit"] {
+      background:$getContacted-submit-bg;
+      border:none;
+      color:#fff;
+      padding:0px 40px;
+      @include border-radius(4px,4px);
+      font-weight:bold;
+      font-size:14px;
+      text-transform:uppercase;
+      cursor:pointer;
+      @include trans;
+
+      &:hover {
+        color:$getContacted-submit-bg;
+        background:#fff;
+      }
+    }
+  }
+}
+
+main {
+  width:100%;
+  max-width:1200px;
+  padding:0px 10px;
+  margin:auto;
+  margin-bottom:120px;
+
+  nav#subMenu {
+    width:300px;
+    height:500px;
+    background:blue;
+    float:left;
+  }
+
+  #mainContent {
+    width:calc(100% - 320px);
+    float:right;
+    height:500px;
+    background:tomato;
+  }
+}
+
+
+footer {
+  width:100%;
+  background:purple;
+  height:50px;
+}

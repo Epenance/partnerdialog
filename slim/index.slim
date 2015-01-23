@@ -1,13 +1,43 @@
 doctype html
 html
   head
-    title Slim Examples
+    title Partner Dialog
     link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css"
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
   body
-    h1 Markup examples 1234
-    span.icons.icons-plus
+    header
+      ul
+        li
+          a href="#" Kundeanalyse
+        li
+          a href="#" Leadgenerering
+        li
+          a href="#" Mødebooking
+        li
+          a href="#" Salgsstrategi
+        li
+          a href="#" Salgstræning
+    nav#mainNav
+      #logo
+        a href="#"
+      ul
+        li
+          a href="#" Virksomheden
+        li
+          a href="#" Kompetencer
+        li
+          a href="#" Kunder
+        li
+          a href="#" Kontakt
+    #getContacted
+      h2 Skal vi kontakte dig?
+      form
+        input type="text" placeholder="Navn"
+        input type="text" placeholder="Telefon"
+        input type="submit" value="send"
 
-    #content
-      p This example shows you how a basic Slim file looks like.
-
-    div id="footer"
+    main
+      nav#subMenu
+      #mainContent
+      .cf
+    footer

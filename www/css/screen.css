@@ -2,7 +2,9 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700);
+/* line 5, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,47 +26,277 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 3, ../../scss/frame.scss */
+body {
+  background: #fff;
+}
+
+/* line 7, ../../scss/frame.scss */
+header {
+  background: #363e46;
+  height: 35px;
+  width: 100%;
+}
+/* line 12, ../../scss/frame.scss */
+header ul {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: 1200px;
+  padding: 0px 10px;
+  margin: auto;
+  text-align: right;
+}
+/* line 21, ../../scss/frame.scss */
+header ul li {
+  display: inline-block;
+  line-height: 35px;
+  margin-left: 20px;
+}
+/* line 26, ../../scss/frame.scss */
+header ul li a {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 32, ../../scss/frame.scss */
+header ul li a:hover {
+  color: white;
+}
+
+/* line 40, ../../scss/frame.scss */
+nav#mainNav {
+  width: 100%;
+  height: 95px;
+  max-width: 1200px;
+  padding: 0px 10px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+/* line 48, ../../scss/frame.scss */
+nav#mainNav #logo {
+  width: 343px;
+  height: 53px;
+  float: left;
+  background: url(../img/logo.png);
+  position: relative;
+  top: 14px;
+}
+/* line 56, ../../scss/frame.scss */
+nav#mainNav #logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 63, ../../scss/frame.scss */
+nav#mainNav ul {
+  float: right;
+  height: 100%;
+  text-align: right;
+  padding-top: 44px;
+}
+/* line 69, ../../scss/frame.scss */
+nav#mainNav ul li {
+  margin-left: 50px;
+  display: inline-block;
+  height: 100%;
+}
+/* line 74, ../../scss/frame.scss */
+nav#mainNav ul li a {
+  color: #363e46;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  text-decoration: none;
+  font-size: 20px;
+}
+/* line 80, ../../scss/frame.scss */
+nav#mainNav ul li a:hover {
+  color: #6eaec5;
+}
+
+/* line 89, ../../scss/frame.scss */
+#getContacted {
+  height: 100px;
+  width: 100%;
+  max-width: 1200px;
+  background: #363e46;
+  margin: auto;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  padding: 0px 30px;
+  margin-bottom: 50px;
+}
+/* line 99, ../../scss/frame.scss */
+#getContacted h2 {
+  font-family: "Lora", serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 100px;
+  float: left;
+}
+/* line 109, ../../scss/frame.scss */
+#getContacted form {
+  float: right;
+  height: 100%;
+  line-height: 100px;
+}
+/* line 114, ../../scss/frame.scss */
+#getContacted form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #363e46;
+}
+/* line 117, ../../scss/frame.scss */
+#getContacted form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #363e46;
+  opacity: 1;
+}
+/* line 121, ../../scss/frame.scss */
+#getContacted form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #363e46;
+  opacity: 1;
+}
+/* line 125, ../../scss/frame.scss */
+#getContacted form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #363e46;
+}
+/* line 129, ../../scss/frame.scss */
+#getContacted form input {
+  margin-left: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 135, ../../scss/frame.scss */
+#getContacted form input[type="text"] {
+  padding: 0px 15px;
+  background: #fff;
+  border: none;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  color: #363e46;
+  font-size: 14px;
+}
+/* line 145, ../../scss/frame.scss */
+#getContacted form input[type="submit"] {
+  background: #6eaec5;
+  border: none;
+  color: #fff;
+  padding: 0px 40px;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 157, ../../scss/frame.scss */
+#getContacted form input[type="submit"]:hover {
+  color: #6eaec5;
+  background: #fff;
+}
+
+/* line 165, ../../scss/frame.scss */
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0px 10px;
+  margin: auto;
+  margin-bottom: 120px;
+}
+/* line 172, ../../scss/frame.scss */
+main nav#subMenu {
+  width: 300px;
+  height: 500px;
+  background: blue;
+  float: left;
+}
+/* line 179, ../../scss/frame.scss */
+main #mainContent {
+  width: calc(100% - 320px);
+  float: right;
+  height: 500px;
+  background: tomato;
+}
+
+/* line 188, ../../scss/frame.scss */
+footer {
+  width: 100%;
+  background: purple;
+  height: 50px;
+}
+
+/* line 14, ../../scss/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 18, ../../scss/screen.scss */
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 22, ../../scss/screen.scss */
+.cf {
+  clear: both;
 }
 
 /* line 64, icons/*.png */
@@ -73,33 +305,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-accept {
   background-position: 0 0;
   height: 16px;
   width: 16px;
 }
 
-/* line 84, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-close {
   background-position: 0 -16px;
   height: 16px;
   width: 16px;
 }
 
-/* line 84, ../../../../../../home/epenance/.rvm/gems/ruby-2.1.3/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-plus {
   background-position: 0 -32px;
   height: 16px;
   width: 16px;
-}
-
-/* line 12, ../../scss/screen.scss */
-body {
-  background: teal;
-}
-
-/* line 13, ../../scss/screen.scss */
-.icons {
-  display: inline-block;
 }
