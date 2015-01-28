@@ -19,10 +19,20 @@ header {
     margin:auto;
     text-align:right;
 
+    @media screen and (max-width: $break-larger) {
+      text-align:center;
+      overflow:hidden;
+    }
+
     li {
       display:inline-block;
       line-height:35px;
       margin-left:20px;
+
+      @media screen and (max-width: $break-larger) {
+        margin-left:10px;
+        margin-right:10px;
+      }
 
       a {
         color:rgba(255,255,255,0.3);
@@ -46,13 +56,27 @@ nav#mainNav {
   margin:auto;
   margin-bottom:35px;
 
+  @media screen and (max-width: $break-medium) {
+    height:auto;
+    margin-bottom:10px;
+  }
+
   #logo {
-    width:343px;
-    height:53px;
+    max-width:343px;
+    width:100%;
+    //height:53px;
     float:left;
-    background:url(../img/logo.png);
+    //background:url(../img/logo.png);
     position:relative;
     top:14px;
+
+
+
+    @media screen and (max-width: $break-larger) {
+      float:none;
+      margin:auto;
+
+    }
 
     a {
       display:block;
@@ -67,16 +91,36 @@ nav#mainNav {
     text-align:right;
     padding-top:44px;
 
+    @media screen and (max-width: $break-larger) {
+      float:none;
+      text-align:center;
+    }
+
     li {
       margin-left:50px;
       display:inline-block;
       height:100%;
+      @include trans;
+
+      @media screen and (max-width: $break-medium) {
+        display:block;
+        margin-bottom:20px;
+        margin-left:0px;
+      }
+
+      @media screen and (max-width: $break-bigger) {
+        margin-left:20px;
+      }
 
       a {
         color:$mainNav-color;
         @include trans;
         text-decoration:none;
         font-size:20px;
+
+        @media screen and (max-width: $break-bigger) {
+          font-size:16px;
+        }
 
         &:hover {
           color:$mainNav-color-hover;
@@ -96,6 +140,12 @@ nav#mainNav {
   @include border-radius(4px, 4px);
   padding:0px 30px;
   margin-bottom:50px;
+  text-align:center;
+
+  @media screen and (max-width: $break-big) {
+    height:auto;
+    padding:20px 30px;
+  }
 
   h2 {
     font-family:$second-font;
@@ -103,14 +153,28 @@ nav#mainNav {
     font-weight:bold;
     color:#fff;
     line-height:100px;
-    //display:inline-block;
     float:left;
+
+    @media screen and (max-width: $break-big) {
+      float:none;
+      text-align:center;
+      line-height:1;
+      margin-bottom:20px;
+    }
   }
 
   form {
     float:right;
     height:100%;
     line-height:100px;
+
+    @media screen and (max-width: $break-big) {
+      line-height:1;
+    }
+
+    @media screen and (max-width: $break-big) {
+      float:none;
+    }
 
     ::-webkit-input-placeholder { /* WebKit browsers */
       color:    $header-bg;
@@ -132,12 +196,24 @@ nav#mainNav {
       position:relative;
       margin-left:10px;
 
+      &:nth-child(3) {
+        @media screen and (max-width: $break-big) {
+          display:block;
+          margin:auto;
+          text-align:center;
+        }
+      }
+
+      @media screen and (max-width: $break-big) {
+        margin-bottom:10px;
+      }
+
       label {
         position:absolute;
         height:40px;
         left:0px;
         top:calc(50% - 20px);
-        background:white;
+        background:rgba(255,255,255,0);
         line-height:40px;
         padding:0px 10px;
         font-size:14px;
@@ -206,10 +282,23 @@ main {
   margin:auto;
   margin-bottom:120px;
 
+  @media screen and (max-width: $break-large) {
+    margin-bottom:50px;
+  }
+
   nav#subMenu {
     width:300px;
     min-height:500px;
     float:left;
+    padding:0px 10px;
+
+    @media screen and (max-width: $break-medium) {
+      float:none;
+      width:100%;
+      text-align:center;
+      display:none;
+    }
+
 
     h1 {
       font-family:$second-font;
@@ -219,14 +308,33 @@ main {
       color:$header-bg;
     }
 
+    ul {
+      @media screen and (max-width: $break-medium) {
+      border:1px solid rgba(0,0,0,0.8);
+      border-bottom:0px solid rgba(0,0,0,0.8);
+      }
+    }
+
     ul li {
       margin-bottom:25px;
       list-style-image:url("../img/list-style.png");
       line-height:16px;
+
+      @media screen and (max-width: $break-medium) {
+        list-style-image:none;
+        width:100%;
+        border-bottom:1px solid rgba(0,0,0,0.8);
+        margin-bottom:0px;
+        padding:10px 0px;
+      }
     }
 
     ul li ul {
       margin-top:15px;
+
+      @media screen and (max-width: $break-medium) {
+      border:none;
+      }
     }
 
     ul li ul li {
@@ -234,6 +342,10 @@ main {
       list-style-image:none;
       margin-bottom:15px;
       margin-left:10px;
+
+      @media screen and (max-width: $break-medium) {
+        margin-left:0px;
+      }
     }
 
     ul li a {
@@ -254,17 +366,38 @@ main {
     float:right;
     min-height:500px;
 
+    @media screen and (max-width: $break-medium) {
+      width:100%;
+      float:none;
+      padding:10px;
+    }
+
     color:$header-bg;
 
     h1 {
       font-size:50px;
       font-family:$second-font;
       margin-bottom:20px;
+      font-weight:bold;
+      @include trans;
+
+      @media screen and (max-width: $break-big) {
+        font-size:32px;
       }
+
+      @media screen and (max-width: $break-larger) {
+        font-size:24px;
+      }
+
+    }
     h3 {
       font-size:20px;
       line-height:1.5;
       margin-bottom:20px;
+
+      @media screen and (max-width: $break-larger) {
+        font-size:18px;
+      }
     }
 
     p {
@@ -316,6 +449,7 @@ main {
           display:block;
           width:100%;
           cursor:pointer;
+          padding-right:40px;
         }
 
         .accordion-toggler {
@@ -358,7 +492,11 @@ main {
         }
         h2 {
           font-size:20px;
+          @include trans;
 
+          @media screen and (max-width: $break-large) {
+            font-size:16px;
+          }
           @include noselect;
         }
 
@@ -391,6 +529,12 @@ footer {
     bottom:-60px;
     font-size:14px;
     color:$header-bg;
+
+    @media screen and (max-width: $break-medium) {
+      text-align:center;
+      width:100%;
+      right:0;
+    }
   }
 
   section {
@@ -401,6 +545,16 @@ footer {
     font-size:14px;
     color:$header-bg;
     min-width:200px;
+
+    @media screen and (max-width: $break-medium) {
+      width:100%;
+      float:none;
+      padding: 10px calc(50% - 110px);
+    }
+
+    img {
+      margin-bottom:5px;
+    }
 
     a {
       color:$getContacted-submit-bg;

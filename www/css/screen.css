@@ -90,13 +90,27 @@ header ul {
   margin: auto;
   text-align: right;
 }
-/* line 22, ../../scss/frame.scss */
+@media screen and (max-width: 830px) {
+  /* line 13, ../../scss/frame.scss */
+  header ul {
+    text-align: center;
+    overflow: hidden;
+  }
+}
+/* line 27, ../../scss/frame.scss */
 header ul li {
   display: inline-block;
   line-height: 35px;
   margin-left: 20px;
 }
-/* line 27, ../../scss/frame.scss */
+@media screen and (max-width: 830px) {
+  /* line 27, ../../scss/frame.scss */
+  header ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+/* line 37, ../../scss/frame.scss */
 header ul li a {
   color: rgba(255, 255, 255, 0.3);
   font-size: 12px;
@@ -106,12 +120,12 @@ header ul li a {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 33, ../../scss/frame.scss */
+/* line 43, ../../scss/frame.scss */
 header ul li a:hover {
   color: white;
 }
 
-/* line 41, ../../scss/frame.scss */
+/* line 51, ../../scss/frame.scss */
 nav#mainNav {
   width: 100%;
   height: 95px;
@@ -120,35 +134,73 @@ nav#mainNav {
   margin: auto;
   margin-bottom: 35px;
 }
-/* line 49, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 51, ../../scss/frame.scss */
+  nav#mainNav {
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+/* line 64, ../../scss/frame.scss */
 nav#mainNav #logo {
-  width: 343px;
-  height: 53px;
+  max-width: 343px;
+  width: 100%;
   float: left;
-  background: url(../img/logo.png);
   position: relative;
   top: 14px;
 }
-/* line 57, ../../scss/frame.scss */
+@media screen and (max-width: 830px) {
+  /* line 64, ../../scss/frame.scss */
+  nav#mainNav #logo {
+    float: none;
+    margin: auto;
+  }
+}
+/* line 81, ../../scss/frame.scss */
 nav#mainNav #logo a {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 64, ../../scss/frame.scss */
+/* line 88, ../../scss/frame.scss */
 nav#mainNav ul {
   float: right;
   height: 100%;
   text-align: right;
   padding-top: 44px;
 }
-/* line 70, ../../scss/frame.scss */
+@media screen and (max-width: 830px) {
+  /* line 88, ../../scss/frame.scss */
+  nav#mainNav ul {
+    float: none;
+    text-align: center;
+  }
+}
+/* line 99, ../../scss/frame.scss */
 nav#mainNav ul li {
   margin-left: 50px;
   display: inline-block;
   height: 100%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-/* line 75, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 99, ../../scss/frame.scss */
+  nav#mainNav ul li {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  /* line 99, ../../scss/frame.scss */
+  nav#mainNav ul li {
+    margin-left: 20px;
+  }
+}
+/* line 115, ../../scss/frame.scss */
 nav#mainNav ul li a {
   color: #363e46;
   -webkit-transition: all 0.4s;
@@ -158,12 +210,18 @@ nav#mainNav ul li a {
   text-decoration: none;
   font-size: 20px;
 }
-/* line 81, ../../scss/frame.scss */
+@media screen and (max-width: 1060px) {
+  /* line 115, ../../scss/frame.scss */
+  nav#mainNav ul li a {
+    font-size: 16px;
+  }
+}
+/* line 125, ../../scss/frame.scss */
 nav#mainNav ul li a:hover {
   color: #6eaec5;
 }
 
-/* line 90, ../../scss/frame.scss */
+/* line 134, ../../scss/frame.scss */
 #getContacted {
   height: 100px;
   width: 100%;
@@ -175,8 +233,16 @@ nav#mainNav ul li a:hover {
   border-radius: 4px / 4px;
   padding: 0px 30px;
   margin-bottom: 50px;
+  text-align: center;
 }
-/* line 100, ../../scss/frame.scss */
+@media screen and (max-width: 960px) {
+  /* line 134, ../../scss/frame.scss */
+  #getContacted {
+    height: auto;
+    padding: 20px 30px;
+  }
+}
+/* line 150, ../../scss/frame.scss */
 #getContacted h2 {
   font-family: "Lora", serif;
   font-size: 26px;
@@ -185,47 +251,82 @@ nav#mainNav ul li a:hover {
   line-height: 100px;
   float: left;
 }
-/* line 110, ../../scss/frame.scss */
+@media screen and (max-width: 960px) {
+  /* line 150, ../../scss/frame.scss */
+  #getContacted h2 {
+    float: none;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+}
+/* line 166, ../../scss/frame.scss */
 #getContacted form {
   float: right;
   height: 100%;
   line-height: 100px;
 }
-/* line 115, ../../scss/frame.scss */
+@media screen and (max-width: 960px) {
+  /* line 166, ../../scss/frame.scss */
+  #getContacted form {
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 166, ../../scss/frame.scss */
+  #getContacted form {
+    float: none;
+  }
+}
+/* line 179, ../../scss/frame.scss */
 #getContacted form ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #363e46;
 }
-/* line 118, ../../scss/frame.scss */
+/* line 182, ../../scss/frame.scss */
 #getContacted form :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #363e46;
   opacity: 1;
 }
-/* line 122, ../../scss/frame.scss */
+/* line 186, ../../scss/frame.scss */
 #getContacted form ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #363e46;
   opacity: 1;
 }
-/* line 126, ../../scss/frame.scss */
+/* line 190, ../../scss/frame.scss */
 #getContacted form :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #363e46;
 }
-/* line 130, ../../scss/frame.scss */
+/* line 194, ../../scss/frame.scss */
 #getContacted form .input_wrapper {
   display: inline-block;
   position: relative;
   margin-left: 10px;
 }
-/* line 135, ../../scss/frame.scss */
+@media screen and (max-width: 960px) {
+  /* line 199, ../../scss/frame.scss */
+  #getContacted form .input_wrapper:nth-child(3) {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 194, ../../scss/frame.scss */
+  #getContacted form .input_wrapper {
+    margin-bottom: 10px;
+  }
+}
+/* line 211, ../../scss/frame.scss */
 #getContacted form .input_wrapper label {
   position: absolute;
   height: 40px;
   left: 0px;
   top: calc(50% - 20px);
-  background: white;
+  background: rgba(255, 255, 255, 0);
   line-height: 40px;
   padding: 0px 10px;
   font-size: 14px;
@@ -249,11 +350,11 @@ nav#mainNav ul li a:hover {
   transition: all 0.4s;
   cursor: text;
 }
-/* line 153, ../../scss/frame.scss */
+/* line 229, ../../scss/frame.scss */
 #getContacted form input:valid + label {
   opacity: 0;
 }
-/* line 157, ../../scss/frame.scss */
+/* line 233, ../../scss/frame.scss */
 #getContacted form input:focus + label {
   left: 100%;
   background: #6eaec5;
@@ -273,12 +374,12 @@ nav#mainNav ul li a:hover {
   border-bottom-right-radius: 4px;
   opacity: 1;
 }
-/* line 167, ../../scss/frame.scss */
+/* line 243, ../../scss/frame.scss */
 #getContacted form input {
   height: 40px;
   line-height: 40px;
 }
-/* line 172, ../../scss/frame.scss */
+/* line 248, ../../scss/frame.scss */
 #getContacted form input[type="text"] {
   padding: 0px 15px;
   background: #fff;
@@ -289,7 +390,7 @@ nav#mainNav ul li a:hover {
   color: #363e46;
   font-size: 14px;
 }
-/* line 182, ../../scss/frame.scss */
+/* line 258, ../../scss/frame.scss */
 #getContacted form input[type="submit"] {
   background: #6eaec5;
   border: none;
@@ -307,13 +408,13 @@ nav#mainNav ul li a:hover {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 194, ../../scss/frame.scss */
+/* line 270, ../../scss/frame.scss */
 #getContacted form input[type="submit"]:hover {
   color: #6eaec5;
   background: #fff;
 }
 
-/* line 202, ../../scss/frame.scss */
+/* line 278, ../../scss/frame.scss */
 main {
   width: 100%;
   max-width: 1200px;
@@ -321,13 +422,29 @@ main {
   margin: auto;
   margin-bottom: 120px;
 }
-/* line 209, ../../scss/frame.scss */
+@media screen and (max-width: 700px) {
+  /* line 278, ../../scss/frame.scss */
+  main {
+    margin-bottom: 50px;
+  }
+}
+/* line 289, ../../scss/frame.scss */
 main nav#subMenu {
   width: 300px;
   min-height: 500px;
   float: left;
+  padding: 0px 10px;
 }
-/* line 214, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 289, ../../scss/frame.scss */
+  main nav#subMenu {
+    float: none;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+}
+/* line 303, ../../scss/frame.scss */
 main nav#subMenu h1 {
   font-family: "Lora", serif;
   font-weight: bold;
@@ -335,24 +452,53 @@ main nav#subMenu h1 {
   margin-bottom: 30px;
   color: #363e46;
 }
-/* line 222, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 311, ../../scss/frame.scss */
+  main nav#subMenu ul {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.8);
+  }
+}
+/* line 318, ../../scss/frame.scss */
 main nav#subMenu ul li {
   margin-bottom: 25px;
   list-style-image: url("../img/list-style.png");
   line-height: 16px;
 }
-/* line 228, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 318, ../../scss/frame.scss */
+  main nav#subMenu ul li {
+    list-style-image: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    margin-bottom: 0px;
+    padding: 10px 0px;
+  }
+}
+/* line 332, ../../scss/frame.scss */
 main nav#subMenu ul li ul {
   margin-top: 15px;
 }
-/* line 232, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 332, ../../scss/frame.scss */
+  main nav#subMenu ul li ul {
+    border: none;
+  }
+}
+/* line 340, ../../scss/frame.scss */
 main nav#subMenu ul li ul li {
   list-style-type: none;
   list-style-image: none;
   margin-bottom: 15px;
   margin-left: 10px;
 }
-/* line 239, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 340, ../../scss/frame.scss */
+  main nav#subMenu ul li ul li {
+    margin-left: 0px;
+  }
+}
+/* line 351, ../../scss/frame.scss */
 main nav#subMenu ul li a {
   color: #6eaec5;
   text-decoration: none;
@@ -363,66 +509,97 @@ main nav#subMenu ul li a {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 245, ../../scss/frame.scss */
+/* line 357, ../../scss/frame.scss */
 main nav#subMenu ul li a:hover {
   padding-left: 10px;
   color: #363e46;
 }
-/* line 252, ../../scss/frame.scss */
+/* line 364, ../../scss/frame.scss */
 main #mainContent {
   width: calc(100% - 320px);
   float: right;
   min-height: 500px;
   color: #363e46;
 }
-/* line 259, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 364, ../../scss/frame.scss */
+  main #mainContent {
+    width: 100%;
+    float: none;
+    padding: 10px;
+  }
+}
+/* line 377, ../../scss/frame.scss */
 main #mainContent h1 {
   font-size: 50px;
   font-family: "Lora", serif;
   margin-bottom: 20px;
+  font-weight: bold;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-/* line 264, ../../scss/frame.scss */
+@media screen and (max-width: 960px) {
+  /* line 377, ../../scss/frame.scss */
+  main #mainContent h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 830px) {
+  /* line 377, ../../scss/frame.scss */
+  main #mainContent h1 {
+    font-size: 24px;
+  }
+}
+/* line 393, ../../scss/frame.scss */
 main #mainContent h3 {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-/* line 270, ../../scss/frame.scss */
+@media screen and (max-width: 830px) {
+  /* line 393, ../../scss/frame.scss */
+  main #mainContent h3 {
+    font-size: 18px;
+  }
+}
+/* line 403, ../../scss/frame.scss */
 main #mainContent p {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
-/* line 276, ../../scss/frame.scss */
+/* line 409, ../../scss/frame.scss */
 main #mainContent img {
   max-width: 100%;
   margin-bottom: 25px;
 }
-/* line 281, ../../scss/frame.scss */
+/* line 414, ../../scss/frame.scss */
 main #mainContent a {
   text-decoration: none;
   color: #6eaec5;
 }
-/* line 285, ../../scss/frame.scss */
+/* line 418, ../../scss/frame.scss */
 main #mainContent a:hover {
   text-decoration: underline;
 }
-/* line 290, ../../scss/frame.scss */
+/* line 423, ../../scss/frame.scss */
 main #mainContent ul {
   list-style-type: disc;
   list-style-position: inside;
   margin-bottom: 25px;
 }
-/* line 295, ../../scss/frame.scss */
+/* line 428, ../../scss/frame.scss */
 main #mainContent ul li {
   font-size: 20px;
   margin-bottom: 10px;
 }
-/* line 301, ../../scss/frame.scss */
+/* line 434, ../../scss/frame.scss */
 main #mainContent .accordion {
   width: 100%;
 }
-/* line 304, ../../scss/frame.scss */
+/* line 437, ../../scss/frame.scss */
 main #mainContent .accordion section {
   width: 100%;
   background: #e4e7ea;
@@ -439,13 +616,14 @@ main #mainContent .accordion section {
   position: relative;
   margin-bottom: 10px;
 }
-/* line 315, ../../scss/frame.scss */
+/* line 448, ../../scss/frame.scss */
 main #mainContent .accordion section .accordion-heading {
   display: block;
   width: 100%;
   cursor: pointer;
+  padding-right: 40px;
 }
-/* line 321, ../../scss/frame.scss */
+/* line 455, ../../scss/frame.scss */
 main #mainContent .accordion section .accordion-toggler {
   background: white;
   color: #6eaec5;
@@ -466,7 +644,7 @@ main #mainContent .accordion section .accordion-toggler {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 334, ../../scss/frame.scss */
+/* line 468, ../../scss/frame.scss */
 main #mainContent .accordion section .accordion-toggler:before {
   content: "+";
   font-size: 20px;
@@ -475,23 +653,27 @@ main #mainContent .accordion section .accordion-toggler:before {
   line-height: 35px;
   text-align: center;
 }
-/* line 344, ../../scss/frame.scss */
+/* line 478, ../../scss/frame.scss */
 main #mainContent .accordion section.active {
   background: #6eaec5;
   color: white;
 }
-/* line 349, ../../scss/frame.scss */
+/* line 483, ../../scss/frame.scss */
 main #mainContent .accordion section.active .accordion-toggler:before {
   content: "-";
 }
-/* line 355, ../../scss/frame.scss */
+/* line 489, ../../scss/frame.scss */
 main #mainContent .accordion section a {
   color: white;
   text-decoration: underline;
 }
-/* line 359, ../../scss/frame.scss */
+/* line 493, ../../scss/frame.scss */
 main #mainContent .accordion section h2 {
   font-size: 20px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -499,26 +681,32 @@ main #mainContent .accordion section h2 {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 365, ../../scss/frame.scss */
+@media screen and (max-width: 700px) {
+  /* line 493, ../../scss/frame.scss */
+  main #mainContent .accordion section h2 {
+    font-size: 16px;
+  }
+}
+/* line 503, ../../scss/frame.scss */
 main #mainContent .accordion section .accordion-content {
   margin-top: 30px;
   display: none;
 }
 
-/* line 375, ../../scss/frame.scss */
+/* line 513, ../../scss/frame.scss */
 footer {
   width: 100%;
   background: #e4e7ea;
   padding: 40px 10px 70px 10px;
 }
-/* line 381, ../../scss/frame.scss */
+/* line 519, ../../scss/frame.scss */
 footer .sectionContainer {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   position: relative;
 }
-/* line 388, ../../scss/frame.scss */
+/* line 526, ../../scss/frame.scss */
 footer small {
   position: absolute;
   right: 10px;
@@ -526,7 +714,15 @@ footer small {
   font-size: 14px;
   color: #363e46;
 }
-/* line 396, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 526, ../../scss/frame.scss */
+  footer small {
+    text-align: center;
+    width: 100%;
+    right: 0;
+  }
+}
+/* line 540, ../../scss/frame.scss */
 footer section {
   width: 30%;
   display: block;
@@ -536,7 +732,19 @@ footer section {
   color: #363e46;
   min-width: 200px;
 }
-/* line 405, ../../scss/frame.scss */
+@media screen and (max-width: 630px) {
+  /* line 540, ../../scss/frame.scss */
+  footer section {
+    width: 100%;
+    float: none;
+    padding: 10px calc(50% - 110px);
+  }
+}
+/* line 555, ../../scss/frame.scss */
+footer section img {
+  margin-bottom: 5px;
+}
+/* line 559, ../../scss/frame.scss */
 footer section a {
   color: #6eaec5;
   text-decoration: none;
@@ -546,15 +754,15 @@ footer section a {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 411, ../../scss/frame.scss */
+/* line 565, ../../scss/frame.scss */
 footer section a:hover {
   color: #363e46;
 }
-/* line 416, ../../scss/frame.scss */
+/* line 570, ../../scss/frame.scss */
 footer section p {
   line-height: 1.5;
 }
-/* line 420, ../../scss/frame.scss */
+/* line 574, ../../scss/frame.scss */
 footer section h4 {
   font-size: 26px;
   font-weight: bold;
@@ -562,11 +770,11 @@ footer section h4 {
   color: #363e46;
   margin-bottom: 25px;
 }
-/* line 428, ../../scss/frame.scss */
+/* line 582, ../../scss/frame.scss */
 footer section ul {
   list-style-type: none;
 }
-/* line 431, ../../scss/frame.scss */
+/* line 585, ../../scss/frame.scss */
 footer section ul li {
   margin-bottom: 10px;
 }
