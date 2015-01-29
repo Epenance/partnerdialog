@@ -64,34 +64,39 @@
     </div>
     <main>
       <nav id="subMenu">
-        <h1>
-          Virksomheden
-        </h1>
-        <ul>
-          <li>
-            <a href="#">Ledelsen</a>
-          </li>
-          <li>
-            <a href="#">Mission og Vision</a>
-            <ul>
-              <li>
-                <a href="#">Lorem Ipsum</a>
-              </li>
-              <li>
-                <a href="#">Lorem Ipsum</a>
-              </li>
-              <li>
-                <a href="#">Lorem Ipsum</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Værdier</a>
-          </li>
-          <li>
-            <a href="#">Karriere</a>
-          </li>
-        </ul>
+        <div id="subMenuToggler">
+          <span class="icons-menu"></span>
+        </div>
+        <div id="mob_wrap">
+          <h1>
+            Virksomheden
+          </h1>
+          <ul>
+            <li>
+              <a href="#">Ledelsen</a>
+            </li>
+            <li>
+              <a href="#">Mission og Vision</a>
+              <ul>
+                <li>
+                  <a href="#">Lorem Ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem Ipsum</a>
+                </li>
+                <li>
+                  <a href="#">Lorem Ipsum</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Værdier</a>
+            </li>
+            <li>
+              <a href="#">Karriere</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div id="mainContent">
         <h1>
@@ -100,6 +105,34 @@
         <h3>
           Partner Dialog er sat i verden for at hjælpe virksomheder og organisationer med at opnå deres salgsmål.
         </h3>
+        <form action="" method="post">
+          <div class="form_row">
+            <div class="input_wrapper">
+              <input id="contactName" name="navn" required="" type="text" /><label for="contactName">Navn</label>
+            </div>
+            <div class="input_wrapper">
+              <input id="contactCompany" name="firma" required="" type="text" /><label for="contactCompany">Firma</label>
+            </div>
+          </div>
+          <div class="form_row">
+            <div class="input_wrapper">
+              <input id="contactEmail" name="email" required="" type="email" /><label for="contactEmail">Email</label>
+            </div>
+            <div class="input_wrapper">
+              <input id="contactPhone" name="telefon" required="" type="text" /><label for="contactPhone">Telefon</label>
+            </div>
+          </div>
+          <div class="form_row">
+            <div class="input_wrapper">
+              <textarea id="contactMessage" name="besked" required=""></textarea><label for="contactMessage">Besked</label>
+            </div>
+          </div>
+          <div class="form_row">
+            <div class="input_wrapper">
+              <input name="send" type="submit" value="Send" />
+            </div>
+          </div>
+        </form>
         <img alt="" src="img/sample-content/handshake.jpg" />
         <p>
           For os handler det ikke bare om det hurtige éngangssalg. Det handler om at skabe stærke og langsigtede relationer mellem <a href="#">virksomhederne</a>. Vi tror på, at det er på den lange bane, at man opnår de bedste og mest profitable resultater.

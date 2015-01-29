@@ -291,12 +291,41 @@ main {
     min-height:500px;
     float:left;
     padding:0px 10px;
+    @include trans;
+
+    &.hidden {
+      display:none;
+    }
 
     @media screen and (max-width: $break-medium) {
-      float:none;
-      width:100%;
-      text-align:center;
-      display:none;
+      position:fixed;
+      max-height:90vh;
+      top:50%;
+      transform:translateY(-50%);
+      left:-278px;
+      border:1px solid rgba(0,0,0,0.3);
+      @include border-radius(4px,4px);
+      background:white;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      z-index:100;
+      opacity:0.6;
+      min-height:0px;
+      padding:0;
+
+      &:hover {
+        left:-10px;
+        opacity:1;
+      }
+    }
+
+    #mob_wrap {
+      @media screen and (max-width: $break-medium) {
+        width:100%;
+        height:100%;
+        padding:30px;
+        overflow:auto;
+        max-height:90vh;
+      }
     }
 
 
@@ -308,10 +337,30 @@ main {
       color:$header-bg;
     }
 
+    #subMenuToggler {
+        display:none;
+
+        @media screen and (max-width: $break-medium) {
+          position:absolute;
+          padding:15px;
+          top:50%;
+          transform:translateY(-50%);
+          right:-25px;
+          @include border-radius(50%);
+          background:white;
+          display:block;
+          box-shadow: 3px 2px 2px 0 rgba(0, 0, 0, 0.16), 3px 2px 4px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        span {
+          display:block;
+          opacity:0.5;
+        }
+    }
+
     ul {
       @media screen and (max-width: $break-medium) {
-      border:1px solid rgba(0,0,0,0.8);
-      border-bottom:0px solid rgba(0,0,0,0.8);
+        margin-left:20px;
       }
     }
 
@@ -321,11 +370,7 @@ main {
       line-height:16px;
 
       @media screen and (max-width: $break-medium) {
-        list-style-image:none;
-        width:100%;
-        border-bottom:1px solid rgba(0,0,0,0.8);
-        margin-bottom:0px;
-        padding:10px 0px;
+
       }
     }
 
@@ -333,7 +378,7 @@ main {
       margin-top:15px;
 
       @media screen and (max-width: $break-medium) {
-      border:none;
+        margin-left:15px;
       }
     }
 
@@ -344,7 +389,7 @@ main {
       margin-left:10px;
 
       @media screen and (max-width: $break-medium) {
-        margin-left:0px;
+
       }
     }
 
@@ -365,6 +410,10 @@ main {
     width:calc(100% - 320px);
     float:right;
     min-height:500px;
+
+    &.sidebar_disabled {
+
+    }
 
     @media screen and (max-width: $break-medium) {
       width:100%;
@@ -428,6 +477,124 @@ main {
       li {
         font-size:20px;
         margin-bottom:10px;
+      }
+    }
+
+    form {
+
+      ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    $header-bg;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $header-bg;
+        opacity:  1;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $header-bg;
+        opacity:  1;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    $header-bg;
+      }
+
+      .form_row {
+        width:100%;
+      }
+
+      .input_wrapper {
+        display:inline-block;
+        position:relative;
+        margin-bottom:10px;
+
+        label {
+          position:absolute;
+          height:40px;
+          left:0px;
+          top:calc(50% - 20px);
+          background:rgba(255,255,255,0);
+          line-height:40px;
+          padding:0px 10px;
+          font-size:14px;
+          color:$header-bg;
+          @include border-right-radius(0px);
+          @include border-left-radius(4px);
+          transform:translateX(0%);
+          @include trans;
+          cursor:text;
+        }
+      }
+
+      input:valid + label, textarea:valid + label  {
+        opacity:0;
+      }
+
+      textarea + label {
+        top:0px!important;
+      }
+
+      input:focus + label, textarea:focus + label {
+        left:100%;
+        background:$getContacted-submit-bg;
+        color:white;
+        transform:translateX(-100%);
+        @include border-left-radius(0px);
+        @include border-right-radius(4px);
+        opacity:1;
+      }
+
+      input {
+        height:40px;
+        line-height:40px;
+        border:1px solid rgba(0,0,0,0.4);
+        outline:none;
+        width:200px;
+      }
+
+      textarea {
+        padding:15px 15px;
+        background:#fff;
+        border:1px solid rgba(0,0,0,0.4);
+        @include border-radius(4px,4px);
+        color:$header-bg;
+        font-size:14px;
+        width:404px;
+        height:200px;
+      }
+
+      input[type="text"] {
+        padding:0px 15px;
+        background:#fff;
+        border:1px solid rgba(0,0,0,0.4);
+        @include border-radius(4px,4px);
+        color:$header-bg;
+        font-size:14px;
+      }
+
+      input[type="email"] {
+        padding:0px 15px;
+        background:#fff;
+        border:1px solid rgba(0,0,0,0.4);
+        @include border-radius(4px,4px);
+        color:$header-bg;
+        font-size:14px;
+      }
+
+      input[type="submit"] {
+        background:$getContacted-submit-bg;
+        border:none;
+        color:#fff;
+        padding:0px 40px;
+        @include border-radius(4px,4px);
+        font-weight:bold;
+        font-size:14px;
+        text-transform:uppercase;
+        cursor:pointer;
+        @include trans;
+
+        &:hover {
+          color:$getContacted-submit-bg;
+          background:#fff;
+        }
       }
     }
 

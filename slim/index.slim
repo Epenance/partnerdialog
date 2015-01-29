@@ -45,26 +45,51 @@ html
       .cf
     main
       nav#subMenu
-        h1 Virksomheden
-        ul
-          li
-            a href="#" Ledelsen
-          li
-            a href="#" Mission og Vision
-            ul
-              li
-                a href="#" Lorem Ipsum
-              li
-                a href="#" Lorem Ipsum
-              li
-                a href="#" Lorem Ipsum
-          li
-            a href="#" Værdier
-          li
-            a href="#" Karriere
+        #subMenuToggler
+          span.icons-menu
+        #mob_wrap
+          h1 Virksomheden
+          ul
+            li
+              a href="#" Ledelsen
+            li
+              a href="#" Mission og Vision
+              ul
+                li
+                  a href="#" Lorem Ipsum
+                li
+                  a href="#" Lorem Ipsum
+                li
+                  a href="#" Lorem Ipsum
+            li
+              a href="#" Værdier
+            li
+              a href="#" Karriere
       #mainContent
         h1 Hvem er Partner Dialog?
         h3 Partner Dialog er sat i verden for at hjælpe virksomheder og organisationer med at opnå deres salgsmål.
+        form method="post" action=""
+          .form_row
+            .input_wrapper
+              input#contactName type="text" name="navn" required=""
+              label for="contactName" Navn
+            .input_wrapper
+              input#contactCompany type="text" name="firma" required=""
+              label for="contactCompany" Firma
+          .form_row
+            .input_wrapper
+              input#contactEmail type="email" name="email" required=""
+              label for="contactEmail" Email
+            .input_wrapper
+              input#contactPhone type="text" name="telefon" required=""
+              label for="contactPhone" Telefon
+          .form_row
+            .input_wrapper
+              textarea#contactMessage name="besked" required=""
+              label for="contactMessage" Besked
+          .form_row
+            .input_wrapper
+              input name="send" type="submit" value="Send"
         img src="img/sample-content/handshake.jpg" alt=""
         p For os handler det ikke bare om det hurtige éngangssalg. Det handler om at skabe stærke og langsigtede relationer mellem <a href="#">virksomhederne</a>. Vi tror på, at det er på den lange bane, at man opnår de bedste og mest profitable resultater.
         p Vi er et kompetencehus, som kan understøtte din virksomheds salgsindsatser i bred forstand. Udover det opsøgende og direkte salg tilbyder vi en række konsulentydelser og individuelle totalløsninger, hvis du ønsker at udlicitere hele salgsprocessen.
@@ -74,7 +99,6 @@ html
           li Bullet
           li Bullet
         img src="https://unsplash.it/1000/500" alt=""
-
         .accordion
           section
             h2.accordion-heading 1. Hvem er partner dialog
