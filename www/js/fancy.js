@@ -1,3 +1,5 @@
+$('#getContactedVegan').hide();
+
 $('.accordion-heading, .accordion-toggler').each(function(){
 
   var $content = $(this).closest('section').find('.accordion-content');

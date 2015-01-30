@@ -196,13 +196,6 @@ nav#mainNav {
       position:relative;
       margin-left:10px;
 
-      &:nth-child(3) {
-        @media screen and (max-width: $break-big) {
-          display:block;
-          margin:auto;
-          text-align:center;
-        }
-      }
 
       @media screen and (max-width: $break-big) {
         margin-bottom:10px;
@@ -266,6 +259,12 @@ nav#mainNav {
       text-transform:uppercase;
       cursor:pointer;
       @include trans;
+
+      @media screen and (max-width: $break-big) {
+        display:block;
+        margin:auto;
+        text-align:center;
+      }
 
       &:hover {
         color:$getContacted-submit-bg;
@@ -410,6 +409,7 @@ main {
     width:calc(100% - 320px);
     float:right;
     min-height:500px;
+    line-height:1.5;
 
     &.sidebar_disabled {
 
@@ -426,6 +426,7 @@ main {
     h1 {
       font-size:50px;
       font-family:$second-font;
+      @include trans;
       margin-bottom:20px;
       font-weight:bold;
       @include trans;
@@ -439,13 +440,43 @@ main {
       }
 
     }
+
+    h2 {
+      font-size:28px;
+      line-height:1.5;
+      margin-bottom:20px;
+      font-weight:bold;
+      font-family:$second-font;
+      @include trans;
+
+      @media screen and (max-width: $break-larger) {
+        font-size:22px;
+      }
+    }
+
     h3 {
       font-size:20px;
       line-height:1.5;
       margin-bottom:20px;
+      font-weight:bold;
+      font-family:$second-font;
+      @include trans;
 
       @media screen and (max-width: $break-larger) {
         font-size:18px;
+      }
+    }
+
+    h4 {
+      font-size:18px;
+      line-height:1.5;
+      margin-bottom:20px;
+      font-weight:bold;
+      font-family:$second-font;
+      @include trans;
+
+      @media screen and (max-width: $break-larger) {
+        font-size:16px;
       }
     }
 
@@ -453,6 +484,14 @@ main {
       font-size:14px;
       line-height:1.5;
       margin-bottom:30px;
+    }
+
+    em {
+      font-size:14px;
+      line-height:1.5;
+      margin-bottom:30px;
+      font-style:italic;
+      display:block;
     }
 
     img {
@@ -559,6 +598,10 @@ main {
         font-size:14px;
         width:404px;
         height:200px;
+
+        @media screen and (max-width: $break-small) {
+          width:200px;
+        }
       }
 
       input[type="text"] {
@@ -590,10 +633,13 @@ main {
         text-transform:uppercase;
         cursor:pointer;
         @include trans;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
         &:hover {
           color:$getContacted-submit-bg;
           background:#fff;
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
         }
       }
     }
@@ -617,6 +663,7 @@ main {
           width:100%;
           cursor:pointer;
           padding-right:40px;
+          margin-bottom:0px;
         }
 
         .accordion-toggler {
@@ -753,6 +800,57 @@ footer {
         margin-bottom:10px;
       }
 
+    }
+  }
+}
+
+
+.mailModal {
+  width:90%;
+  max-width:1200px;
+  background:green;
+  margin:auto;
+  text-align:center;
+  padding:30px 10px;
+  color:#3c763d;
+  background:#dff0d8;
+  border:1px solid #d6e9c6;
+  @include border-radius(4px,4px);
+  margin-bottom:20px;
+  line-height:1.5;
+}
+
+strong {
+  font-weight:bold;
+}
+#mainContent {
+  table.ledelsen {
+    tr {
+      background:#efeeee;
+      border-bottom:25px solid white;
+
+      td {
+        padding:20px;
+      }
+      @include border-radius(4px, 4px);
+
+      td img {
+        @include border-radius(4px,4px);
+      }
+
+      td h3, td h4 {
+        margin-bottom:5px;
+      }
+    }
+
+    td {
+      vertical-align:top;
+      &:nth-child(1) {
+        width:205px;
+      }
+      &:nth-child(2) {
+        padding:20px 20px 20px 0px;
+      }
     }
   }
 }
