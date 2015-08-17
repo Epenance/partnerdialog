@@ -149,6 +149,7 @@ nav#mainNav {
   padding:0px 30px;
   margin-bottom:50px;
   text-align:center;
+  position:relative;
 
   @media screen and (max-width: $break-big) {
     height:auto;
@@ -160,14 +161,31 @@ nav#mainNav {
     font-size:23px;
     font-weight:bold;
     color:#fff;
-    line-height:100px;
-    float:left;
+    //line-height:100px;
+    //float:left;
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
 
     @media screen and (max-width: $break-big) {
       float:none;
       text-align:center;
       line-height:1;
       margin-bottom:20px;
+      position:static;
+    }
+  }
+
+  h3 {
+    color: white;
+    position: absolute;
+    bottom: 23px;
+
+    @media screen and (max-width: $break-big) {
+      position:static;
+      text-align:left;
+      margin-bottom:20px;
+      line-height:1.4;
     }
   }
 
